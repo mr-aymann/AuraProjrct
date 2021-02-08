@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:paddingTop="20dp">
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".DriverHome"/>
+
+
+
+
+      <SearchView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/search_location"
+    android:queryHint="Enter Destination Location"
+    android:iconifiedByDefault="false"
+    android:layout_margin="10dp"
+    android:elevation="5dp"
+    android:background="@drawable/bg_round"
+    />
+ <ImageView
+     android:layout_width="30dp"
+     android:layout_height="30dp"
+     android:layout_margin="20dp"
+     android:id="@+id/hospital_search"
+     android:layout_below="@+id/search_location"
+     android:layout_alignParentRight="true"
+     android:src="@drawable/ic_local_hospital_black_24dp"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        map:cardElevation="10dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/ImgExpandable"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/ic_keyboard_arrow_up_black_24dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+
+
+            <Button
+                android:id="@+id/pickuprequest"
+                android:layout_below="@+id/ImgExpandable"
+                android:text="PICK UP REQUEST"
+                android:background="@color/btnSignIn"
+                android:textColor="@android:color/white"
+                android:layout_margin="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>
